@@ -28,6 +28,8 @@ function stop() {
 
 function draw(e) {
   context.beginPath();
+  context.strokeStyle = "black";
+  context.lineWidth = 1;
   context.moveTo(coordinate.x, coordinate.y);
   getPosition(e);
   context.lineTo(coordinate.x, coordinate.y);

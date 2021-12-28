@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   overflow: hidden;
+}
+
+h1 {
+  color: #5c5959;
+  position: relative;
+  user-select: none;
+  text-align: center;
+  padding: 1.5rem 0.5rem 0.5rem;
+  font: 4rem "Indie Flower", cursive;
 }
