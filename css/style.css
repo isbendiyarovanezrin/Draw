@@ -1,3 +1,8 @@
+:root {
+  --text-color: #5c5959;
+  --font-family: "Indie Flower", cursive;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,12 +18,12 @@ body {
 }
 
 h1 {
-  color: #5c5959;
+  color: var(--text-color);
   position: relative;
   user-select: none;
   text-align: center;
   padding: 1.5rem 0.5rem 0.5rem;
-  font: 4rem "Indie Flower", cursive;
+  font: 4rem var(--font-family);
 }
 
 @media screen and (max-width: 800px) {
