@@ -1,5 +1,6 @@
 "use strict";
 
+const p = document.querySelector(".title");
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 const coordinate = { x: 0, y: 0 };
@@ -38,3 +39,12 @@ function draw(e) {
   context.stroke();
   context.closePath();
 }
+
+setTimeout(() => {
+  p.style.opacity = "0";
+  p.style.transition = "1s ease";
+}, 3300);
+
+setTimeout(() => {
+  p.style.display = "none";
+}, 4000);
