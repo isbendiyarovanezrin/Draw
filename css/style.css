@@ -1,5 +1,8 @@
 :root {
+  --white: #faf0fc;
   --text-color: #5c5959;
+  --gradient-color1: #f29492;
+  --gradient-color2: #114357;
   --font-family: "Indie Flower", cursive;
 }
 
@@ -15,15 +18,43 @@ html {
 
 body {
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-family);
 }
 
-h1 {
+.title {
   color: var(--text-color);
-  position: relative;
+  position: absolute;
+  padding-top: 1.5rem;
+  font-size: 4rem;
   user-select: none;
-  text-align: center;
-  padding: 1.5rem 0.5rem 0.5rem;
-  font: 4rem var(--font-family);
+  z-index: -1;
+}
+
+@media screen and (max-width: 1007px) {
+  .title,
+  canvas {
+    display: none;
+  }
+
+  body::after {
+    content: "Visit in desktop for the best experience.";
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 4rem;
+    padding: 0 1.7rem;
+    color: var(--white);
+    background-image: linear-gradient(
+      to right,
+      var(--gradient-color1),
+      var(--gradient-color2)
+    );
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -32,13 +63,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 7px;
-  }
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
   html {
     font-size: 6px;
   }
